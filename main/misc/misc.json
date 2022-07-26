@@ -1,0 +1,16 @@
+{
+    "errors":
+    {
+        "auth_missing": "No authentication key provided.",
+        "invalid_auth": "Invalid authentication key.",
+        "method_missing": "No method name provided.",
+        "db_connect": "Failed to connect to database.",
+        "id_missing": "No ID is provided.",
+        "term_missing": "No search term provided.",
+        "term_empty": "The search term provided is empty."
+    },
+
+    "description": "This error originated from the package: alpha-coders",
+
+    "params": ["auth", "method", "info_level", "page", "width", "height", "operator", "check_last", "id", "sort", "term", "count"]
+}
