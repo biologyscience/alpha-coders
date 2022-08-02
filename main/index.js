@@ -47,7 +47,7 @@ class Alpha
 
     search = require('./methods/search');
     getWallpaperInfo = require('./methods/getWallpaperInfo');
-    getRandom = require('./methods/getRandomWallpaper');
+    getRandomWallpaper = require('./methods/getRandomWallpaper');
     queryCount = require('./methods/queryCount');
 }
 
