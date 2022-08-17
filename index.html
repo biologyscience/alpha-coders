@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Alpha Coders</title>
+        <link rel="shortcut icon" href="svg/Icon.svg">
+        <link rel="stylesheet" href="style.css">        
+
+        <meta name="title" content="Alpha Coders">
+        <meta name="description" content="A complete package used to interact with the Wallpaper Abyss API to get wallpapers, wallpaper count, collections, and much more !">
+        <meta name="theme-color" content="#FEE452">
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://biologyscience.github.io/package/alpha-coders/">
+        <meta property="og:title" content="Alpha Coders">
+        <meta property="og:description" content="A complete package used to interact with the Wallpaper Abyss API to get wallpapers, wallpaper count, collections, and much more !">
+
+        <meta property="twitter:url" content="https://biologyscience.github.io/package/alpha-coders/">
+        <meta property="twitter:title" content="Alpha Coders">
+        <meta property="twitter:description" content="A complete package used to interact with the Wallpaper Abyss API to get wallpapers, wallpaper count, collections, and much more !">
+    </head>
+    <body>
+        
+        <div>
+            <img src="svg/Alpha Coders.svg" id="image">
+        </div>
+        <div id="middle">
+            <div class="text">
+                A complete package used to interact with the
+                <a href="https://wall.alphacoders.com/api.php" id="API">Wallpaper Abyss API</a>
+                to get wallpapers, wallpaper count, collections, and much more !  
+            </div>
+            <div class="text">
+            Check out the links below for more information.
+            </div>
+        </div>
+        <div id="bottom">
+            <button>
+                <a href="https://github.com/biologyscience/alpha-coders">
+                    <img src="svg/GitHub.svg" alt="GitHub" class="icons">
+                </a>
+            </button>
+
+            <button>
+                <a href="https://npmjs.com/package/alpha-coders">
+                    <img src="svg/npm.svg" alt="npm" class="icons">
+                </a>
+            </button>
+
+            <button>
+                <a href="">
+                    <img src="svg/Website.svg" alt="Website" class="icons">
+                </a>
+            </button>
+
+            <button>
+                <a href="https://biologyscience.gitbook.io/alpha-coders/">
+                    <img src="svg/Docs.svg" alt="Documentation" class="icons">
+                </a>
+            </button>
+
+            <button>
+                <a href="https://github.com/biologyscience/alpha-coders/blob/main/LICENSE">
+                    <img src="svg/Open Source.svg" alt="License" class="icons">
+                </a>
+            </button>
+        </div>
+        
+        <script>
+            document.querySelectorAll('img').forEach(x => x.setAttribute('draggable', 'false'));
+
+            let x = 45;
+
+            setInterval(() =>
+            {
+                document.body.style.backgroundImage = 'linear-gradient(' + x + 'deg, #536DFE 10%, #FEE452)';
+
+                x++; x === 360 ? x = 0 : null;
+            }, 100);           
+        </script>
+    </body>
+</html>

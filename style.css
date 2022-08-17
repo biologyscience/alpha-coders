@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Caveat Brush';
+    src: url('Caveat Brush.ttf');
+}
+
+:root
+{
+    --iconSize: 50px;
+    --multiplier: 3;
+    --alphaCodersHeight: 100px;
+    --alphaCodersWidth: 300px;
+}
+
+body
+{
+    background-image: linear-gradient(45deg, #536DFE 10%, #FEE452);
+    margin: 0 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Caveat Brush';
+    justify-content: center;
+}
+
+#middle
+{
+    font-size: 2rem;
+    color: black;
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text { margin: .1em 0; }
+
+#API
+{
+    position: relative;
+    text-decoration: none;
+    color: hsl(0, 0%, 20%);
+}
+
+#API::after
+{
+    content: '';
+    position: absolute;
+    height: .125em;
+    width: 0%;
+    background-color: rgb(33, 71, 222);
+    bottom: -.15em;
+    left: 0;
+    border-radius: 10rem;
+    transition: width ease 500ms;
+}
+
+#API:hover::after { width: 100%; }
+
+#bottom
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+button
+{
+    position: relative;
+    background: none;
+    margin: 0 5%;
+    border: none;
+    transition: transform ease 200ms;
+}
+
+button::after
+{
+    content: '';
+    position: absolute;
+    background-color: black;
+    bottom: -.15em;
+    left: 0;
+    height: .125em;
+    width: 0%;
+    border-radius: 10rem;
+    transition: width ease 200ms;
+}
+
+button:hover { transform: translateY(-.25rem); }
+
+button:hover::after { width: 100%; }
+
+.icons
+{
+    height: var(--iconSize);
+    width: var(--iconSize);
+}
+
+#image
+{
+    height: calc(var(--alphaCodersHeight) * var(--multiplier));
+    width: calc(var(--alphaCodersWidth) * var(--multiplier));
+}

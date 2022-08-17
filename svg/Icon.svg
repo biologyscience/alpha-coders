@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#29A9E0;}
+	.st1{fill:#16DE12;}
+	.st2{fill:#E08DE3;}
+</style>
+<g id="Icon">
+	<path id="BG" class="st0" d="M128,16.2v95.6c0,4.5-1.6,8.3-4.7,11.5c-3.2,3.2-6.9,4.7-11.5,4.7H16.2c-4.6,0-8.3-1.5-11.5-4.7
+		c-3.2-3.2-4.7-7-4.7-11.5V16.2c0-4.5,1.5-8.3,4.7-11.5S11.6,0,16.2,0h95.6c4.5,0,8.3,1.5,11.5,4.7S128,11.7,128,16.2z"/>
+	<path id="Mountains" class="st1" d="M12.2,100.8l29.9-29.9c0.7-0.7,1.8-0.7,2.5,0l15.7,15.5c0.7,0.7,1.9,0.7,2.6-0.2l19.3-24.4
+		c0.7-0.9,2-0.9,2.7,0l31.3,39.1c0.9,1.1,0.1,2.8-1.4,2.8H13.4C11.8,103.8,11.1,101.9,12.2,100.8z"/>
+	<path id="Circle" class="st2" d="M30.8,51.8c-3.1,0-5.8-1.1-8-3.3c-2.2-2.2-3.3-4.8-3.3-8s1.1-5.8,3.3-8s4.8-3.3,8-3.3
+		s5.8,1.1,8,3.3c2.2,2.2,3.3,4.8,3.3,8s-1.1,5.8-3.3,8C36.6,50.7,33.9,51.8,30.8,51.8z"/>
+</g>
+</svg>
