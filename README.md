@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://biologyscience.github.io/package/alpha-coders/svg/Alpha%20Coders.svg" alt="Cover" height="200px" width="600px">
+<img src="https://alpha-coders.js.org/svg/Alpha%20Coders.svg" alt="Cover" height="200px" width="600px">
 </p>
 
 # About
@@ -83,19 +83,19 @@ If you face any other issue, feel free to create an issue on the [issues page](h
 
 # Useful Links
 <a href="https://github.com/biologyscience/alpha-coders">
-<img alt="GitHub" src="https://biologyscience.github.io/package/alpha-coders/svg/GitHub.svg" height="40px">
+<img alt="GitHub" src="https://alpha-coders.js.org/svg/GitHub.svg" height="40px">
 </a>
 <a href="https://www.npmjs.com/package/alpha-coders">
-<img alt="npm" src="https://biologyscience.github.io/package/alpha-coders/svg/npm.svg" height="40px">
+<img alt="npm" src="https://alpha-coders.js.org/svg/npm.svg" height="40px">
 </a>
-<a href="https://biologyscience.github.io/package/alpha-coders">
-<img alt="Website" src="https://biologyscience.github.io/package/alpha-coders/svg/Website.svg" height="40px">
+<a href="https://alpha-coders.js.org">
+<img alt="Website" src="https://alpha-coders.js.org/svg/Website.svg" height="40px">
 </a>
-<a href="https://biologyscience.gitbook.io/alpha-coders/">
-<img alt="Documentation" src="https://biologyscience.github.io/package/alpha-coders/svg/Docs.svg" height="40px">
+<a href="https://biologyscience.gitbook.io/alpha-coders">
+<img alt="Documentation" src="https://alpha-coders.js.org/svg/Docs.svg" height="40px">
 </a>
 <a href="https://github.com/biologyscience/alpha-coders/blob/main/LICENSE">
-<img alt="License" src="https://biologyscience.github.io/package/alpha-coders/svg/Open%20Source.svg" height="40px">
+<img alt="License" src="https://alpha-coders.js.org/svg/Open%20Source.svg" height="40px">
 </a>
 
 ---
