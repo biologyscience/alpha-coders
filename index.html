@@ -1,20 +1,24 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>Alpha Coders</title>
         <link rel="shortcut icon" href="svg/Icon.svg">
-        <link rel="stylesheet" href="style.css">        
+        <link rel="stylesheet" href="style.css">
 
         <meta name="title" content="Alpha Coders">
         <meta name="description" content="A complete package used to interact with the Wallpaper Abyss API to get wallpapers, wallpaper count, collections, and much more !">
         <meta name="theme-color" content="#FEE452">
 
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://biologyscience.github.io/package/alpha-coders/">
+        <meta property="og:url" content="https://alpha-coders.js.org">
         <meta property="og:title" content="Alpha Coders">
+        <!-- <meta property="og:site_name" content="Alpha Coders"> -->
+        <meta property="og:image" content="https://repository-images.githubusercontent.com/517610746/12806b23-4ede-48b5-8962-be6145d01ca3">
         <meta property="og:description" content="A complete package used to interact with the Wallpaper Abyss API to get wallpapers, wallpaper count, collections, and much more !">
 
-        <meta property="twitter:url" content="https://biologyscience.github.io/package/alpha-coders/">
+        <meta property="twitter:url" content="https://alpha-coders.js.org">
         <meta property="twitter:title" content="Alpha Coders">
+        <meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/517610746/12806b23-4ede-48b5-8962-be6145d01ca3">
         <meta property="twitter:description" content="A complete package used to interact with the Wallpaper Abyss API to get wallpapers, wallpaper count, collections, and much more !">
     </head>
     <body>
@@ -52,13 +56,13 @@
             </button>
 
             <button>
-                <a href="https://biologyscience.gitbook.io/alpha-coders/">
+                <a href="docs/">
                     <img src="svg/Docs.svg" alt="Documentation" class="icons">
                 </a>
             </button>
 
             <button>
-                <a href="https://github.com/biologyscience/alpha-coders/blob/main/LICENSE">
+                <a href="license/">
                     <img src="svg/Open Source.svg" alt="License" class="icons">
                 </a>
             </button>
@@ -71,7 +75,7 @@
 
             setInterval(() =>
             {
-                document.body.style.backgroundImage = 'linear-gradient(' + x + 'deg, #536DFE 10%, #FEE452)';
+                document.body.style.backgroundImage = `linear-gradient(${x}deg, #536DFE 10%, #FEE452)`;
 
                 x++; x === 360 ? x = 0 : null;
             }, 100);           
