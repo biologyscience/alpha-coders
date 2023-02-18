@@ -1,4 +1,4 @@
-const misc = require('../../misc/misc.json');
+const misc = require('../misc/misc.json');
 
 function getRandomWallpaper(options)
 {
