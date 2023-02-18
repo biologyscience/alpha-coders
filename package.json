@@ -1,6 +1,6 @@
 {
     "name": "alpha-coders",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "A complete package used to interact with the Wallpaper Abyss / The Alpha Coders API to get wallpapers, wallpaper count, collections, and much more !",
 
     "main": "main/index.js",

@@ -10,10 +10,10 @@ You will need an API key which can obtained from [The Alpha Coders API](https://
 npm i alpha-coders
 ```
 
-### NOTE:
+<!-- ### NOTE:
 If you would like to use the v2 of the Alpha Coders API, kindly install the package using `npm i alpha-coders@2.x`
 
-The default installation of the package uses the v3 of the Alpha Coders API.
+The default installation of the package uses the v3 of the Alpha Coders API. -->
 
 # Features
 - Made with JavaScript.
