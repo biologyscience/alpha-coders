@@ -1,6 +1,4 @@
-const
-    fetch = require('node-fetch'),
-    misc = require('../../misc/misc.json');
+const misc = require('../../misc/misc.json');
 
 function fromCategory(id, options)
 {
@@ -18,7 +16,7 @@ function fromCategory(id, options)
 
     return new Promise((resolve) =>
     {
-        fetch.default(this.baseURL).then(x => x.json()).then((response) =>
+        fetch(this.baseURL).then(x => x.json()).then((response) =>
         {
             if (response.success === false) { return require('../../misc/errorHandler')(response); }
 

@@ -1,14 +1,13 @@
 {
     "name": "alpha-coders",
-    "version": "1.2.1",
-    "description": "A complete package used to interact with the Wallpaper Abyss API to get wallpapers, wallpaper count, collections, and much more !",
+    "version": "2.0.0",
+    "description": "A complete package used to interact with the Wallpaper Abyss / The Alpha Coders API to get wallpapers, wallpaper count, collections, and much more !",
 
     "main": "main/index.js",
     "types": "main/types.d.ts",
   
     "author": "biologyscience",
     "license": "GPL-3.0-only",
-    "dependencies": { "node-fetch": "^2.x" },
     "homepage": "https://alpha-coders.js.org",
     "bugs": { "url": "https://github.com/biologyscience/alpha-coders/issues" },
 
@@ -17,7 +16,8 @@
       "url": "https://github.com/biologyscience/alpha-coders",
       "type": "git"
     },
-    
+
+    "engines": { "node": ">=18.0.0" },
     
     "keywords":
     [

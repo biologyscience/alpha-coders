@@ -1,24 +1,24 @@
-<p align="center">
-<img src="https://alpha-coders.js.org/svg/Alpha%20Coders.svg" alt="Cover" height="200px" width="600px">
-</p>
+<p align="center"> <img src="https://alpha-coders.js.org/svg/Alpha%20Coders.svg" alt="Cover" height="200px" width="600px"> </p>
 
 # About
-A complete package used to interact with the [Wallpaper Abyss API](https://wall.alphacoders.com/api.php) to get wallpapers, wallpaper count, collections, and much more !  
-Please make sure that you are following the Wallpaper Abyss API [terms and conditions](https://wall.alphacoders.com/api.php) while using this package.  
+A complete package used to interact with the [Wallpaper Abyss / The Alpha Coders API](https://api.alphacoders.com/api/instructions) to get wallpapers, wallpaper count, collections, and much more !
 
-You will need an API key which was given to you by the admins of [Wallpaper Abyss](https://alphacoders.com) to use this package. 
-
-### **NOTE**:
-Unfortunately they have closed their API applications, so any new user cannot use this package because you would need an API key in order to use this package.
+You will need an API key which can obtained from [The Alpha Coders API](https://api.alphacoders.com/api/instructions) to use this package. 
 
 # Installation
 ```
 npm i alpha-coders
 ```
+
+### NOTE:
+If you would like to use the v2 of the Alpha Coders API, kindly install the package using `npm i alpha-coders@2.x`
+
+The default installation of the package uses the v3 of the Alpha Coders API.
+
 # Features
 - Made with JavaScript.
 - Easy to use.
-- Complete coverage of all the methods in [Wallpaper Abyss API](https://wall.alphacoders.com/api.php).
+- Complete coverage of all the methods in [The Alpha Coders API](https://api.alphacoders.com/api/instructions).
 - Type support.
 
 <br>
@@ -61,25 +61,10 @@ npm i alpha-coders
   - [getRandomWallpaper](https://biologyscience.gitbook.io/alpha-coders/reference/methods/getrandomwallpaper) **M**
   - [queryCount](https://biologyscience.gitbook.io/alpha-coders/reference/methods/querycount) **M**
 
-# Known Issue:
-### Caused due to version mismatch of [node-fetch](https://www.npmjs.com/package/node-fetch)  
-
-Error:
-```
-\node_modules\alpha-coders\methods\search.js:2
-const fetch = require('node-fetch');
-              ^
-
-Error [ERR_REQUIRE_ESM]: require() of ES Module ...
-```
-To Fix:
-- Open up your terminal
-- Do `npm rm node-fecth` 
-- Then do `npm i node-fetch@2.x`
-
 <br>
 
-If you face any other issue, feel free to create an issue on the [issues page](https://github.com/biologyscience/alpha-coders/issues) in the github repository.
+- Use the latest version of [Node](https://nodejs.org/) for optimal performance.
+- If you face any other issue, feel free to create an issue on the [issues page](https://github.com/biologyscience/alpha-coders/issues) in the github repository.
 
 # Useful Links
 <a href="https://github.com/biologyscience/alpha-coders">
