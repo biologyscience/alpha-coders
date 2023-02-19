@@ -1,7 +1,7 @@
 <p align="center"> <img src="https://alpha-coders.js.org/svg/Alpha%20Coders.svg" alt="Cover" height="200px" width="600px"> </p>
 
 # About
-A complete package used to interact with the [Wallpaper Abyss / The Alpha Coders API](https://api.alphacoders.com/api/instructions) to get wallpapers, wallpaper count, collections, and much more !
+A complete package used to interact with the [Wallpaper Abyss / The Alpha Coders API](https://api.alphacoders.com/api/instructions) to get wallpapers, wallpaper count, and much more !
 
 You will need an API key which can obtained from [The Alpha Coders API](https://api.alphacoders.com/api/instructions) to use this package. 
 
@@ -9,11 +9,6 @@ You will need an API key which can obtained from [The Alpha Coders API](https://
 ```
 npm i alpha-coders
 ```
-
-<!-- ### NOTE:
-If you would like to use the v2 of the Alpha Coders API, kindly install the package using `npm i alpha-coders@2.x`
-
-The default installation of the package uses the v3 of the Alpha Coders API. -->
 
 # Features
 - Made with JavaScript.
@@ -33,32 +28,17 @@ The default installation of the package uses the v3 of the Alpha Coders API. -->
 **M** - Method  
 
 - [Alpha](https://biologyscience.gitbook.io/alpha-coders/reference/classes/alpha) **C**
-  - [getWallpapers](https://biologyscience.gitbook.io/alpha-coders/reference/properties/getwallpapers) **P**
+  - [getSpecificWallpapers](https://biologyscience.gitbook.io/alpha-coders/reference/properties/getspecificwallpapers) **P**
     - [bySort](https://biologyscience.gitbook.io/alpha-coders/reference/methods/bysort) **M**
     - [fromCategory](https://biologyscience.gitbook.io/alpha-coders/reference/methods/fromcategory) **M**
-    - [fromCollection](https://biologyscience.gitbook.io/alpha-coders/reference/methods/fromcollection) **M**
-    - [fromGroup](https://biologyscience.gitbook.io/alpha-coders/reference/methods/fromgroup) **M**
     - [fromSubCategory](https://biologyscience.gitbook.io/alpha-coders/reference/methods/fromsubcategory) **M**
-    - [fromFeatured](https://biologyscience.gitbook.io/alpha-coders/reference/methods/fromfeatured) **M**
-    - [fromPopular](https://biologyscience.gitbook.io/alpha-coders/reference/methods/frompopular) **M**
     - [fromTag](https://biologyscience.gitbook.io/alpha-coders/reference/methods/fromtag) **M**
-    - [fromUser](https://biologyscience.gitbook.io/alpha-coders/reference/methods/fromuser) **M**
-  - [getWallpaperCount](https://biologyscience.gitbook.io/alpha-coders/reference/properties/getwallpapercount) **P**
-    - [inEntireDB](https://biologyscience.gitbook.io/alpha-coders/reference/methods/inentiredb) **M**
-    - [inCategory](https://biologyscience.gitbook.io/alpha-coders/reference/methods/incategory) **M**
-    - [inCollection](https://biologyscience.gitbook.io/alpha-coders/reference/methods/incollection) **M**
-    - [inGroup](https://biologyscience.gitbook.io/alpha-coders/reference/methods/ingroup) **M**
-    - [inSubCategory](https://biologyscience.gitbook.io/alpha-coders/reference/methods/insubcategory) **M**
-    - [inTag](https://biologyscience.gitbook.io/alpha-coders/reference/methods/intag) **M**
-    - [inUser](https://biologyscience.gitbook.io/alpha-coders/reference/methods/inuser) **M**
   - [getList](https://biologyscience.gitbook.io/alpha-coders/reference/properties/getlist) **P**
     - [ofCategory](https://biologyscience.gitbook.io/alpha-coders/reference/methods/ofcategory) **M**
-    - [ofCollection](https://biologyscience.gitbook.io/alpha-coders/reference/methods/ofcollection) **M**
-    - [ofGroup](https://biologyscience.gitbook.io/alpha-coders/reference/methods/ofgroup) **M**
     - [ofSubCategory](https://biologyscience.gitbook.io/alpha-coders/reference/methods/ofsubcategory) **M**
   - [search](https://biologyscience.gitbook.io/alpha-coders/reference/methods/search) **M**
-  - [getWallpaperInfo](https://biologyscience.gitbook.io/alpha-coders/reference/methods/getwallpaperinfo) **M**
-  - [getRandomWallpaper](https://biologyscience.gitbook.io/alpha-coders/reference/methods/getrandomwallpaper) **M**
+  - [getWallpaper](https://biologyscience.gitbook.io/alpha-coders/reference/methods/getwallpaper) **M**
+  - [getRandomWallpapers](https://biologyscience.gitbook.io/alpha-coders/reference/methods/getrandomwallpapers) **M**
   - [queryCount](https://biologyscience.gitbook.io/alpha-coders/reference/methods/querycount) **M**
 
 <br>

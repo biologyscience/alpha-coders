@@ -1,293 +1,306 @@
-type sort = 'newest' | 'rating' | 'views' | 'favorites'
-type operator = 'min' | 'max' | 'equal'
-type fileType = 'jpg' | 'png' | String
-type level = 1 | 2 | 3
-
-type url =
+type BySortOptions =
 {
-    image: String;
-    thumbnail: String;
-    webpage: String;
-}
+    /**
+     * Height of the wallpaper in pixels.
+     */
+    height: Number;
 
-type bySortOptions =
-{
-    level: level;
+    /**
+     * Filter out with respect to the Height and Width.
+     */
+    operator: Operator;
+
+    /**
+     * Different sets of results.
+     */
     page: Number;
+
+    /**
+     * [Min, Max] ratios of the wallpaper size. Applicable only to 'phone' type.
+     */
+    ratio: [Number, Number];
+
+    /**
+     * Type of the device.
+     */
+    type: DeviceType;
+
+    /**
+     * Width of the wallpaper in pixels.
+     */
     width: Number;
+};
+
+/**
+ * Type of the device.
+ */
+type DeviceType = 'desktop' | 'phone';
+
+type File =
+{
+    /**
+     * Size of the file in MegaBytes (MB)
+     */
+    size: Number;
+
+    /**
+     * Type of the file.
+     */
+    type: 'jpg' | 'png' | String;
+};
+
+type GetWallpapersOptions =
+{
+    /**
+     * Height of the wallpaper in pixels.
+     */
     height: Number;
-    operator: operator;
-}
 
-type getWallpapers =
-{
-    id: String;
-    width: String;
-    height: String;
-    fileType: fileType;
-    fileSize: String;
-    url: url;
-    category?: { name: String; id: String; };
-    subCategory?: { name: String; id: String; }
-    user?: { name: String; id: String; }
-    collection?: { name: String | null; id: String | null; };
-    group?: { name: String | null; id: String | null; };
-}
+    /**
+     * Filter out with respect to the Height and Width.
+     */
+    operator: Operator;
 
-type getWallpapersOptions =
-{
-    level: level;
-    sort: sort;
+    /**
+     * Different sets of results.
+     */
     page: Number;
-    width: Number;
-    height: Number;
-    operator: operator;
-}
 
-type countOptions =
-{
-    width: Number;
-    height: Number;
-    operator: operator;
-}
+    /**
+     * [Min, Max] ratios of the wallpaper size. Applicable only to 'phone' type.
+     */
+    ratio: [Number, Number];
 
-type list =
+    /**
+     * A sorting method.
+     */
+    sort: Sort;
+
+    /**
+     * Type of the device.
+     */
+    type: DeviceType;
+
+    /**
+     * Width of the wallpaper in pixels.
+     */
+    width: Number;
+};
+
+type List =
 {
+    /**
+     * ID of the Category or Sub-Category.
+     */
     id: Number;
+
+    /**
+     * Name of the Category or Sub-Category.
+     */
     name: String;
-    count: Number;
-    url: String;
-}
 
-type wallpaper = 
-{
-    id: String;
-    name: String | null;
-    featured: Boolean | null;
-    width: String;
-    height: String;
-    fileType: fileType;
-    fileSize: String;
-    url: url;
-    category: { name: String; id: String; };
-    subCategory: { name: String; id: String; };
-    user: { name: String; id: String; };
-    collection: { name: String | null; id: String | null; };
-    group: { name: String | null; id: String | null; };
-}
-
-type wallpaperInfo =
-{
-    wallpaper: wallpaper;
-    tag: Array<{ id: Number; name: String; }>;
-}
-
-type randomOptions =
-{
-    count: Number;
-    level: level;
-}
-
-type queryCount =
-{
-    currentMonth:
+    wallpaperCount:
     {
-        count: Number;
-        price: Number | Float64Array;
-    };
+        /**
+         * Number of wallpapers for desktop devices.
+         */
+        desktop: Number;
 
-    previousMonth:
-    {
-        count: Number;
-        price: Number | Float64Array;
+        /**
+         * Number of wallpapers for mobile devices.
+         */
+        phone: Number;
     }
-}
+};
+
+type NameID =
+{
+    /**
+     * ID of the preceding object.
+     */
+    id?: Number;
+
+    /**
+     * Name of the preceding object.
+     */
+    name?: String | null;
+};
+
+/**
+ * Filter out with respect to the Height and Width.
+ */
+type Operator = 'min' | 'max' | 'equal';
+
+type QueryCount =
+{
+    /**
+     * Percentage of the API calls used.
+     */
+    percentUsed: String;
+
+    /**
+     * Number of used API calls.
+     */
+    used: Number;
+
+    /**
+     * Number of unused API calls.
+     */
+    unused: Number;
+};
+
+/**
+ * Sorting methods.
+ */
+type Sort = 'newest' | 'rating';
+
+type URL =
+{
+    /**
+     * Link to the image.
+     */
+    image: String;
+
+    /**
+     * Link to the thumbnail version of the image.
+     */
+    thumbnail: String;
+
+    /**
+     * Link to the webpage where the image is held.
+     */
+    webpage: String;
+};
+
+type Wallpaper =
+{
+    file: File;
+    url: URL;
+    user: NameID;
+
+    /**
+     * Height of the wallpaper in pixels.
+     */
+    height: Number;
+
+    /**
+     * ID of the wallpaper.
+     */
+    id: Number;
+
+    /**
+     * Width of the wallpaper in pixels.
+     */
+    width: Number;
+
+    category:
+    {
+        /**
+         * ID of the category.
+         */
+        id: Number;
+
+        /**
+         * Name of the category.
+         */
+        name: String;
+
+        /**
+         * Sub-Category of the Wallpaper.
+         */
+        sub: NameID;
+    };
+};
+
+type WallpaperInfo =
+{
+    /**
+     * Tags of the wallpaper
+     */
+    tags: Array<NameID>;
+
+    wallpaper: Wallpaper;
+};
 
 declare class Alpha
 {
     constructor(apiToken: String);
 
     /**
-     * Get wallpapers
+     * Get Lists
      */
-    getWallpapers:
-    {
-        /**
-         * Returns an Array of wallpapers by the given sort type.
-         * @param sorting A sorting method.
-         * @param options Optional parameters
-         */
-        bySort(sorting: sort, options?: bySortOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns an Array of wallpapers belonging to a single Category.
-         * @param id ID of the category.
-         * @param options Optional parameters
-         */
-        fromCategory(id: Number, options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns an Array of wallpapers belonging to a single Collection.
-         * @param id ID of the collection.
-         * @param options Optional parameters
-         */
-        fromCollection(id: Number, options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns an Array of wallpapers belonging to a single Group.
-         * @param id ID of the group.
-         * @param options Optional parameters
-         */
-        fromGroup(id: Number, options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns an Array of wallpapers belonging to a single Sub-Category.
-         * @param id ID of the Sub-Category.
-         * @param options Optional parameters
-         */
-        fromSubCategory(id: Number, options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns featured Wallpapers.
-         * @param options Optional Parameters
-         */
-        fromFeatured(options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns recently popular Wallpapers.
-         * @param options Optional Parameters
-         */
-        fromPopular(options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns an Array of wallpapers belonging to a single Tag.
-         * @param id ID of the Tag.
-         * @param options Optional parameters
-         */
-        fromTag(id: Number, options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-
-        /**
-         * Returns an Array of wallpapers uploaded by a single User.
-         * @param id ID of the User.
-         * @param options Optional parameters
-         */
-        fromUser(id: Number, options?: getWallpapersOptions): Promise<Array<getWallpapers>>;
-    };
-
-    /**
-     * Get wallpapers Count
-     */
-    getWallpaperCount:
-    {
-        /**
-         * Returns the count of Wallpapers present all over on Wallpaper Abyss.
-         * @param options Optional parameters
-         */
-        inEntireDB(options?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of Wallpapers in a given Category.
-         * @param id ID of the Category.
-         * @param options Optional parameters
-         */
-        inCategory(id: Number, options?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of Wallpapers in a given Collection.
-         * @param id ID of the Collection.
-         * @param options Optional parameters
-         */
-        inCollection(id: Number, options?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of Wallpapers in a given Group.
-         * @param id ID of the Group.
-         * @param options Optional parameters
-         */
-        inGroup(id: Number, options?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of Wallpapers in a given Sub-Category.
-         * @param id ID of the Sub-Category.
-         * @param options Optional parameters
-         */
-        inSubCategory(id: Number, options?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of Featured Wallpapers.
-         * @param options Optional Parameters
-         */
-        inFeatured(options?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of recently Popular Wallpapers.
-         * @param option Optional Parameters
-         */
-        inPopular(option?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of Wallpapers tagged with a given Tag.
-         * @param id ID of the Tag.
-         * @param options Optional parameters
-         */
-        inTag(id: Number, options?: countOptions): Promise<String>;
-
-        /**
-         * Returns the count of Wallpapers submitted a given User.
-         * @param id ID of the User.
-         * @param options Optional parameters
-         */
-        inUser(id: Number, options?: countOptions): Promise<String>;
-    };
-
     getList:
     {
         /**
-         * Returns the list of Categories used on Wallpaper Abyss.
+         * Get the list of Categories used on Wallpaper Abyss.
          */
-        ofCategory(): Promise<Array<list>>;
+        ofCategory(): Promise<Array<List>>;
 
         /**
-         * Returns the list of Collections used on Wallpaper Abyss.
-         */
-        ofCollection(): Promise<Array<list>>;
-
-        /**
-         * Returns the list of Groups in a given Collection.
-         * @param id ID of a Collection.
-         */
-        ofGroup(id: Number): Promise<Array<list>>;
-
-        /**
-         * Returns the list of Sub-Categories in a given Category.
+         * Get the list of Sub-Categories in a given Category.
          * @param id ID of a Category.
+         * @param page Which set of results to be obtained (1 - 200)
          */
-        ofSubCategory(id: Number): Promise<Array<list>>;
+        ofSubCategory(id: Number, page?: Number): Promise<Array<List>>;
     };
 
     /**
-     * Returns Wallpapers matching a given search term.
-     * @param term The search term used for the matching. (MAX 128 Characters)
-     * @param options Optional Parameters
+     * Get wallpapers
      */
-    search(term: String, options?: bySortOptions): Promise<Array<getWallpapers>>;
+    getSpecificWallpapers:
+    {
+        /**
+         * Get an array of random wallpapers in a specific sort.
+         * @param sorting A sorting method.
+         * @param options Optional parameters.
+         */
+        bySort(sorting: Sort, options?: BySortOptions): Promise<Array<Wallpaper> | null>;
+
+        /**
+         * Gets an Array of wallpapers belonging to a single Category.
+         * @param id ID of the category.
+         * @param options Optional parameters.
+         */
+        fromCategory(id: Number, options?: GetWallpapersOptions): Promise<Array<Wallpaper> | null>;
+
+        /**
+         * Gets an Array of wallpapers belonging to a single Sub-Category.
+         * @param id ID of the Sub-Category.
+         * @param options Optional parameters.
+         */
+        fromSubCategory(id: Number, options?: GetWallpapersOptions): Promise<Array<Wallpaper> | null>;
+
+        /**
+         * Gets an Array of wallpapers belonging to a single Tag.
+         * @param id ID of the Tag.
+         * @param options Optional parameters.
+         */
+        fromTag(id: Number, options?: GetWallpapersOptions): Promise<Array<Wallpaper> | null>;
+    };
 
     /**
-     * Returns advanced information about a Wallpaper.
+     * Get an array of random wallpapers.
+     * @param device Type of the device.
+     */
+    getRandomWallpapers(device?: DeviceType): Promise<Array<Wallpaper>>;
+
+    /**
+     * Get a specific Wallpaper with its Tags.
      * @param id ID of the wallpaper.
      */
-    getWallpaperInfo(id: Number): Promise<wallpaperInfo>;
+    getWallpaper(id: Number): Promise<WallpaperInfo | null>;
 
     /**
-     * Returns a fixed amount of random wallpapers.
-     * @param options Optional Parameters
+     * Get Wallpapers matching a given search term.
+     * @param term The search term used for the matching. (MAX 128 Characters)
+     * @param options Optional Parameters.
      */
-    getRandomWallpaper(options?: randomOptions): Promise<Array<getWallpapers>>;
+    search(term: String, options?: BySortOptions): Promise<Array<Wallpaper> | null>;
 
     /**
-     * Returns the API calls and pricing associated with an API key.
+     * Get the API calls associated with the API key.
      */
-    queryCount(): Promise<queryCount>;
+    queryCount(): Promise<QueryCount>;
 }
 
 export = Alpha;
